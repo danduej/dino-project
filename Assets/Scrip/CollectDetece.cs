@@ -20,8 +20,11 @@ public class CollectDeti : MonoBehaviour
         thePlayer.GetComponent<PlayerMovement>().enabled = false;
         playerAnim.GetComponent<Animator>().Play("Stumble Backwards");
         mainCam.GetComponent<Animator>().Play("ColilsionCam");
+        mainCam.GetComponent<Animator>().Play("Credits Animation");
         yield return new WaitForSeconds(3);
         fadeout.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(2);
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(0);
     }
