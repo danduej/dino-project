@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CollectDeti : MonoBehaviour
+public class CollectDetectEndCredits: MonoBehaviour
 {
     [SerializeField] GameObject thePlayer;
     [SerializeField] GameObject playerAnim;
@@ -24,11 +24,9 @@ public class CollectDeti : MonoBehaviour
         yield return new WaitForSeconds(3);
         fadeout.SetActive(true);
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene(0);
     }
 
 }
-
-
